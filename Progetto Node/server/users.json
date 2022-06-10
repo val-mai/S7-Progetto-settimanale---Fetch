@@ -1,0 +1,62 @@
+[
+  {
+    "id" : 1,
+    "username": "john",
+    "firstName": "John",
+    "lastName": "Doe",
+    "gender": "Male",
+    "profileURL": "https://joeschmoe.io/api/v1/jon",
+    "email": "john.doe@example.com",
+    "job": "Art Director"
+  },
+  {
+    "id" : 2,
+    "username": "jane",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "gender": "Female",
+    "profileURL": "https://joeschmoe.io/api/v1/jess",
+    "email": "jane.doe@example.com",
+    "job": "Front-end Developer"
+  },
+  {
+    "id" : 3,
+    "username": "jordan",
+    "firstName": "Jordan",
+    "lastName": "Campbell",
+    "gender": "Male",
+    "profileURL": "https://joeschmoe.io/api/v1/jordan",
+    "email": "jordan.campbell@example.com",
+    "job": "Senior Designer"
+  },
+  {
+    "id" : 4,
+    "username": "joe",
+    "firstName": "Joe",
+    "lastName": "Black",
+    "gender": "Male",
+    "profileURL": "https://joeschmoe.io/api/v1/joe",
+    "email": "joe.black@example.com",
+    "job": "Back-end developer"
+  },
+  {
+    "id" : 5,
+    "username": "julie",
+    "firstName": "Julie",
+    "lastName": "Bezos",
+    "gender": "Female",
+    "profileURL": "https://joeschmoe.io/api/v1/julie",
+    "email": "julie.bezos@example.com",
+    "job": "Junior web developer"
+  },
+  {
+    "id" : 6,
+    "username": "jaqlin",
+    "firstName": "Jaquelin",
+    "lastName": "White",
+    "gender": "Female",
+    "profileURL": "https://joeschmoe.io/api/v1/jaqueline",
+    "email": "jaqlin@mail.com",
+    "job": "BackOffice"
+  }
+]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CRM</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Our People</h2>
+            <div class="add">
+                <p>Add User</p>
+                <button class="addBtn" type="button"><i class="fa-solid fa-user-plus"></i></button>
+            </div>
+        </header>
+        <div class="wrapper">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h2>Add an user</h2>
+            <div class="form">
+                <input type="text" id="user" placeholder="Username...">
+                <input type="email" id="email" placeholder="email@example.com">
+                <input type="text" id="firstname" placeholder="First name...">
+                <input type="text" id="lastname" placeholder="Last name...">
+                <input type="text" id="profileUrl" placeholder="" disabled>
+                <input type="text" id="job" placeholder="Job...">
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" onchange="getURL()" id="gender">
+                        <option value=" " selected> </option>
+                        <option value="Male">M</option>
+                        <option value="Female">F</option>
+                    </select>
+                </div>
+                <button>Confirm</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
