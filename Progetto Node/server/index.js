@@ -37,18 +37,6 @@ app.post('/api/users', (request, response) => {
     response.json('Utente Aggiunto nel DB');
 })
 
-// PUT
-app.put('/api/users/:id', (request, response) => {
-    const id = request.params.id;
-    const obj_mod = request.body;
-
-    let index = users.findIndex(ele => ele.id === +id);
-    users.splice(index, 1, obj_mod);
-
-    response.json('Utente Modificato nel DB');
-})
-
-
 // DELETE
 app.delete('/api/users/:id', (request, response) => {
 

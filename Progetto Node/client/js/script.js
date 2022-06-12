@@ -56,7 +56,17 @@ addBtn.addEventListener('click', () => {
     profileURL.value = "https://joeschmoe.io/api/v1/random";
     job.value = "";
 
-    confirmBtn.addEventListener('click',addUser);
+    confirmBtn.style.display='block';
+
+    if (username.hasAttribute('disabled')) {
+        input.forEach(input => {
+            input.removeAttribute('disabled')
+        })
+    };
+
+    profileURL.setAttribute('disabled', '');
+
+    confirmBtn.addEventListener('click', addUser);
 });
 
 window.onclick = function (event) {
@@ -80,7 +90,7 @@ function showUser(users) {
         trash.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
         trash.setAttribute('onclick', `removeUser(${user.id})`);
         let pencil = document.createElement('div');
-        pencil.innerHTML = '<i class="fa-solid fa-pencil"></i>';
+        pencil.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
         pencil.setAttribute('onclick', `updateUser(${user.id})`);
         let img = document.createElement('img');
         img.src = user.profileURL;
@@ -150,11 +160,11 @@ function removeUser(id) {
 function updateUser(id) {
 
     modal.classList.add('open')
-    modalTitle.innerHTML = "Update User"
+    modalTitle.innerHTML = "User Detail"
 
-    let newurl = urlAPI + id;
+    let urlupdate = urlAPI + id;
 
-    fetch(newurl).then(res => res.json()).then(user => {
+    fetch(urlupdate).then(res => res.json()).then(user => {
         nome.value = user.firstName;
         cognome.value = user.lastName;
         email.value = user.email;
@@ -164,31 +174,10 @@ function updateUser(id) {
         profileURL.value = user.profileURL;
     })
 
-    
-    confirmBtn.addEventListener('click', () => {
-        
-        let upUser = new User(username.value,
-            firstname.value, lastname.value, gender.value,
-            profileURL.value, email.value, job.value);
-        
-            fetch(newurl, {
-            method: "PUT",
-            body: JSON.stringify(upUser),
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }).then(res => res.json()).then(json => {
-            fetch(urlAPI).then(res => res.json()).then(users => showUser(users));
-        });
+    input.forEach(input => {
+        input.setAttribute('disabled', '');
+    })
 
-        username.value = "";
-        email.value = "";
-        nome.value = "";
-        cognome.value = "";
-        profileURL.value = "https://joeschmoe.io/api/v1/random";
-        job.value = "";
-
-        modal.classList.remove('open');
-    });
+    confirmBtn.style.display='none';
 
 }
